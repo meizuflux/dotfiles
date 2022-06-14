@@ -1,0 +1,83 @@
+{
+    "git.autofetch": true,
+    "files.associations": {
+        ".env": "plaintext"
+    },
+    "python.languageServer": "Pylance",
+    "python.venvPath": "venv",
+    "python.linting.pylintPath": "venv/Scripts/pylint",
+    "python.linting.pylintEnabled": true,
+    "python.linting.mypyEnabled": true,
+    "editor.detectIndentation": false,
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "workbench.colorTheme": "Dracula",
+    "editor.fontFamily": "Jetbrains Mono, 'Courier New', monospace",
+    "editor.fontSize": 16,
+    "auto-close-tag.activationOnLanguage": [
+        "xml",
+        "php",
+        "blade",
+        "ejs",
+        "jinja-html",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "plaintext",
+        "markdown",
+        "vue",
+        "liquid",
+        "erb",
+        "lang-cfml",
+        "cfml",
+        "HTML (EEx)",
+        "HTML (Eex)",
+        "plist"
+    ],
+    "auto-rename-tag.activationOnLanguage": [
+        "jinja-html"
+    ],
+    "editor.inlineSuggest.enabled": true,
+    "files.exclude": {
+        "**/.git": false
+    },
+    "editor.autoClosingDelete": "always",
+    "telemetry.telemetryLevel": "off",
+    "git.confirmSync": false,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "pgsql.connections": [
+        {
+            "host": "localhost",
+            "dbname": "mzf",
+            "user": "mzf",
+            "password": "",
+            "emptyPasswordInput": false,
+            "port": "5432",
+            "connectTimeout": 15,
+            "encrypt": false,
+            "applicationName": "vscode-pgsql",
+            "hostaddr": "",
+            "options": "",
+            "sslmode": "prefer",
+            "clientEncoding": "",
+            "sslcompression": true,
+            "sslcert": "",
+            "sslkey": "",
+            "sslrootcert": "",
+            "sslcrl": "",
+            "requirepeer": ""
+        },
+        {
+            "host": "localhost",
+            "dbname": "mzf",
+            "user": "mzf",
+            "password": "",
+            "emptyPasswordInput": false,
+            "port": "5432",
+            "profileName": "mzf"
+        }
+    ],
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+}
