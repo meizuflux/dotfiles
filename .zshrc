@@ -27,24 +27,23 @@ git_info() {
     return
 }
 
+# https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html#Prompt-Expansion
+export PROMPT=$'${vcs_info_msg_0_}%F{#6272a4}\U250C\U2500%f%F{#50fa7b}$(virtualenv_prompt_info)%f %(?.%F{#50fa7b}%?.%F{#ff5555}%?)%f %F{#ff79c6}%n@%m%f %F{#bd93f9}(%~)%f %F{#f1fa8c}$(git_info)%f \n%F{#6272a4}\U2514\U2500%f %F{#8be9fd}%#%f '
 
-export PS1=$'\n%F{#6272a4}\U250C\U2500%{$reset_color%}%F{#50fa7b}$(virtualenv_prompt_info)%{$reset_color%} %F{#ff79c6}%n@%m%{$reset_color%} %F{#bd93f9}(${PWD/#$HOME/\~})%{$reset_color%} %F{#f1fa8c}$(git_info)%{$reset_color%} \n%F{#6272a4}\U2514\U2500%{$reset_color%} %F{#8be9fd}%%%{$reset_color%} '
+# dont require cd to change dir
+setopt AUTO_CD
 
+# auto correction
+setopt CORRECT
+setopt CORRECT_ALL
 
-
-
-
-
-# custom stuff
+# nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # pnpm
 export PNPM_HOME="/home/meizuflux/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-
-# custom from here on out
 
 # get vscode official extensions
 export VSCODE_GALLERY_SERVICE_URL='https://marketplace.visualstudio.com/_apis/public/gallery'
