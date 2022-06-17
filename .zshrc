@@ -28,7 +28,7 @@ git_info() {
 }
 
 
-export PS1=$'\n%F{#6272a4}\U250C\U2500%{$reset_color%}%F{#50fa7b}$(virtualenv_prompt_info)%{$reset_color%} %F{#ff79c6}%n@%m%{$reset_color%} %F{#bd93f9}(${PWD/#$HOME/\~})%{$reset_color%} %F{#f1fa8c}$(git_info)%{$reset_color%} \n%F{#6272a4}\U2514\U2500%{$reset_color%} %F{#8be9fd}$%{$reset_color%} '
+export PS1=$'\n%F{#6272a4}\U250C\U2500%{$reset_color%}%F{#50fa7b}$(virtualenv_prompt_info)%{$reset_color%} %F{#ff79c6}%n@%m%{$reset_color%} %F{#bd93f9}(${PWD/#$HOME/\~})%{$reset_color%} %F{#f1fa8c}$(git_info)%{$reset_color%} \n%F{#6272a4}\U2514\U2500%{$reset_color%} %F{#8be9fd}%%%{$reset_color%} '
 
 
 
