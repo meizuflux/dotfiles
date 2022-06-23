@@ -57,7 +57,7 @@ export VSCODE_GALLERY_RECOMMENDATIONS_URL=''
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_PLUG='p:preview-tui'
 
-# run nnn as sudo
+# run nnn
 alias n='nnn -daH'
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
