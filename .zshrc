@@ -1,12 +1,8 @@
-export ZSH="$HOME/.oh-my-zsh"
-
-ZSH_THEME="robbyrussell"
-
 autoload -U compinit; compinit
 
 plugins=(git virtualenv)
 
-source $ZSH/oh-my-zsh.sh
+setopt PROMPT_SUBST
 
 git_info() {
     project_root=$(git rev-parse --show-toplevel 2> /dev/null)
@@ -25,6 +21,11 @@ git_info() {
 
     printf "<$current_branch>"
     return
+}
+
+function virtualenv_prompt_info(){
+  [[ -n ${VIRTUAL_ENV} ]] || return
+  echo "${ZSH_THEME_VIRTUALENV_PREFIX=[}${VIRTUAL_ENV:t:gs/%/%%}${ZSH_THEME_VIRTUALENV_SUFFIX=]}"
 }
 
 # https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html#Prompt-Expansion
@@ -58,7 +59,7 @@ export NNN_PLUG='p:preview-tui'
 
 # run nnn as sudo
 alias n='nnn -daH'
-alias dotgit='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # gpg key
 export GPG_TTY=$(tty)
