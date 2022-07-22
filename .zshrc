@@ -23,13 +23,15 @@ git_info() {
     return
 }
 
+# disables prompt mangling in virtual_env/bin/activate
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 function virtualenv_prompt_info(){
   [[ -n ${VIRTUAL_ENV} ]] || return
   echo "${ZSH_THEME_VIRTUALENV_PREFIX=[}${VIRTUAL_ENV:t:gs/%/%%}${ZSH_THEME_VIRTUALENV_SUFFIX=]}"
 }
 
 # https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html#Prompt-Expansion
-export PROMPT=$'${vcs_info_msg_0_}%F{#6272a4}\U250C\U2500%f%F{#50fa7b}$(virtualenv_prompt_info)%f %(?.%F{#50fa7b}%?.%F{#ff5555}%?)%f %F{#ff79c6}%n@%m%f %F{#bd93f9}(%~)%f %F{#f1fa8c}$(git_info)%f \n%F{#6272a4}\U2514\U2500%f %F{#8be9fd}%#%f '
+export PROMPT=$'${vcs_info_msg_0_}%F{#6272a4}\U250C\U2500%f%F{#50fa7b} $(virtualenv_prompt_info)%f %(?.%F{#50fa7b}%?.%F{#ff5555}%?)%f %F{#ff79c6}%n@%m%f %F{#bd93f9}(%~)%f %F{#f1fa8c}$(git_info)%f \n%F{#6272a4}\U2514\U2500%f %F{#8be9fd}%#%f '
 
 # dont require cd to change dir
 setopt AUTO_CD
