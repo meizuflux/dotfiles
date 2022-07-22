@@ -63,3 +63,4 @@ alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # gpg key
 export GPG_TTY=$(tty)
+[ -f "/home/meizuflux/.ghcup/env" ] && source "/home/meizuflux/.ghcup/env" # ghcup-env
