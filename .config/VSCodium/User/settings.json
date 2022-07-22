@@ -45,39 +45,7 @@
     "editor.autoClosingDelete": "always",
     "telemetry.telemetryLevel": "off",
     "git.confirmSync": false,
-    "terminal.integrated.defaultProfile.windows": "Git Bash",
-    "pgsql.connections": [
-        {
-            "host": "localhost",
-            "dbname": "mzf",
-            "user": "mzf",
-            "password": "",
-            "emptyPasswordInput": false,
-            "port": "5432",
-            "connectTimeout": 15,
-            "encrypt": false,
-            "applicationName": "vscode-pgsql",
-            "hostaddr": "",
-            "options": "",
-            "sslmode": "prefer",
-            "clientEncoding": "",
-            "sslcompression": true,
-            "sslcert": "",
-            "sslkey": "",
-            "sslrootcert": "",
-            "sslcrl": "",
-            "requirepeer": ""
-        },
-        {
-            "host": "localhost",
-            "dbname": "mzf",
-            "user": "mzf",
-            "password": "",
-            "emptyPasswordInput": false,
-            "port": "5432",
-            "profileName": "mzf"
-        }
-    ],
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
+    "window.titleBarStyle": "custom",
 }
