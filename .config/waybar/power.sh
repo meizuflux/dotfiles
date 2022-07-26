@@ -1,0 +1,2 @@
+swaynag -t warning -f "JetBrains Mono Bold" -m "Power Options" --background "#44475a" --text "#ffffff" --border "#ff5555" --border-bottom-size 3 --button-gap 9 --button-background "#ff5555" --button-dismiss-gap 12 --button-text "#ffffff" --border-bottom "#282a36" \
+    -b "Exit" "swaymsg exit" -b "Lock" "swaylock" -b "Logout" "pkill -KILL -u \"$USER\"" -b "Restart" "shutdown -r now" -b "Shutdown" "shutdown -h now"
