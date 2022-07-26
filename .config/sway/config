@@ -216,4 +216,10 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar swaybar_command waybar
 
+#
+# Screenshots
+#
+bindsym Print exec grimshot copy area
+bindsym Shift+Print exec grimshot save area
+
 include /etc/sway/config.d/*
