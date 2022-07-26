@@ -1,0 +1,82 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: JetBrains Mono, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background-color: #44475a;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    /* Avoid rounded borders under each workspace name */
+    border: none;
+    border-radius: 0;
+}
+
+#workspaces button.focused {
+    padding-top: 3px;
+    background-color: #6272a4;
+    border-bottom: 3px solid #50fa7b;
+}
+
+#workspaces button.urgent {
+    background-color: #ff5555;
+}
+
+#mode {
+    background-color: #6272a4;
+    border-bottom: 3px solid #50fa7b;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd,
+#custom-power {
+    padding: 0 10px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#taskbar button {
+    border: none;
+    border-radius: 0;
+}
+
+#taskbar button.active {
+    padding-top: 3px;
+    background-color: #6272a4;
+    border-bottom: 3px solid #50fa7b;
+}
+
+#custom-spacer {
+    color: #6272a4
+}
+
+
+
+
