@@ -1,8 +1,7 @@
 # Install on new system
 
 ```
-echo ".cfg" >> .gitignore
-git clone https://github.com/meizuflux/dotfiles $HOME/.cfg
+git clone https://github.com/meizuflux/dotfiles $HOME/.cfg --bare
 
 alias cfg='/usr/bin/git --git-dir $HOME/.cfg --work-tree=$HOME'
 cfg config --local status.showUntrackedFiles no
