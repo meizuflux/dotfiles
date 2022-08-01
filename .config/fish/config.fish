@@ -6,9 +6,16 @@ if test -z $DISPLAY; and test (tty) = "/dev/tty1"
     sway
 end
 
+
+#
+#   ENV VARIABLES
+#
 # disable greeting
 set -g fish_greeting
+set -g PATH ~/.local/bin/ $PATH
 
-# alias
+#
+#   ALIASES
+#
 alias n="nnn -daH"
 alias cfg="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
