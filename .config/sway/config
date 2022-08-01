@@ -223,4 +223,8 @@ bar swaybar_command waybar
 bindsym Print exec grimshot copy area
 bindsym Shift+Print exec grimshot save area
 
+# Don't idle with a fullscreen app open
+for_window [class="^.*"] inhibit_idle fullscreen
+for_window [app_id="^.*"] inhibit_idle fullscreen
+
 include /etc/sway/config.d/*
