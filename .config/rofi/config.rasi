@@ -12,11 +12,11 @@
     drac-red: #ff5555;
     drac-yel: #f1fa8c;
 
-    font: "Jetbrains Mono 13";
+    font: "Jetbrains Mono Bold 13";
 
     foreground: @drac-fgd;
     background-color: @drac-bgd;
-    active-background: @drac-pnk;
+    active-background: @drac-grn;
     urgent-background: @drac-red;
     
     selected-background: @active-background;
@@ -40,37 +40,37 @@
 #listview {
     fixed-height: 0;
     border: 0px;
-    spacing:      2px ;
-    scrollbar:    false;
-    padding:      2px 0px 0px ;
+    spacing: 2px ;
+    scrollbar: false;
+    padding: 2px 0px 0px ;
 }
 
 #element {
-    border:  0;
+    border: 0;
     padding: 2px;
     children: [element-icon, element-text];
 }
 
 #element.normal.normal {
     background-color: @background-color;
-    text-color:       @foreground;
+    text-color: @foreground;
 }
 #element.selected.normal {
     background-color: @selected-background;
-    text-color:       @foreground;
+    text-color: @background-color;
 }
 #element.alternate.normal {
     background-color: @background-color;
-    text-color:       @foreground;
+    text-color: @foreground;
 }
 
 #scrollbar {
-    width:        2px ;
-    border:       0;
+    width: 2px ;
+    border: 0;
     handle-width: 8px ;
-    padding:      0;
+    padding: 0;
 }
 
 #inputbar {
-    children:   [ entry,case-indicator ];
+    children: [entry, case-indicator];
 }
