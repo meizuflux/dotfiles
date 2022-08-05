@@ -13,8 +13,8 @@ options = {
     "Lock": "swaylock"
 }
 
-option = run("echo '" + "\n".join(options.keys()) + "' | rofi -dmenu -i")
+option = run("echo '" + "\n".join(options.keys()) + "' | rofi -theme '~/.config/rofi/power.rasi' -dmenu -i -p 'Power Menu'")
 if option:
-    if run("echo '" + "\n".join(["Yes", "No"]) + "' | rofi -dmenu -selected-row 1 -i") == "Yes":
+    if run("echo '" + "\n".join(["Yes", "No"]) + "' | rofi -theme '~/.config/rofi/power.rasi' -dmenu -selected-row 1 -i") == "Yes":
         subprocess.run(f"{options[option]}", shell=True)
 

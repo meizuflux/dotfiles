@@ -1,76 +1,7 @@
-* {
-    /* Dracula theme colour palette */
-    drac-bgd: #282a36;
-    drac-cur: #44475a;
-    drac-fgd: #f8f8f2;
-    drac-cmt: #6272a4;
-    drac-cya: #8be9fd;
-    drac-grn: #50fa7b;
-    drac-ora: #ffb86c;
-    drac-pnk: #ff79c6;
-    drac-pur: #bd93f9;
-    drac-red: #ff5555;
-    drac-yel: #f1fa8c;
-
-    font: "Jetbrains Mono Bold 13";
-
-    foreground: @drac-fgd;
-    background-color: @drac-bgd;
-    active-background: @drac-grn;
-    urgent-background: @drac-red;
-    
-    selected-background: @active-background;
-    selected-urgent-background: @urgent-background;
-    selected-active-background: @active-background;
-    separatorcolor: @active-background;
-    bordercolor: @drac-cmt;
-}
-
-#window {
-    background-color: @background-color;
-    border: 5;
-    border-color: @bordercolor;
-    width: 20%;
-}
-
-#mainbox {
-    padding: 5;
-}
-
-#listview {
-    fixed-height: 0;
-    border: 0px;
-    spacing: 2px ;
-    scrollbar: false;
-    padding: 2px 0px 0px ;
-}
+@import "~/.config/rofi/power.rasi"
 
 #element {
     border: 0;
     padding: 2px;
     children: [element-icon, element-text];
-}
-
-#element.normal.normal {
-    background-color: @background-color;
-    text-color: @foreground;
-}
-#element.selected.normal {
-    background-color: @selected-background;
-    text-color: @background-color;
-}
-#element.alternate.normal {
-    background-color: @background-color;
-    text-color: @foreground;
-}
-
-#scrollbar {
-    width: 2px ;
-    border: 0;
-    handle-width: 8px ;
-    padding: 0;
-}
-
-#inputbar {
-    children: [entry, case-indicator];
 }
