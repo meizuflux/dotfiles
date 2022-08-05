@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrains Mono, Roboto, Helvetica, Arial, sans-serif;
+    font-family: JetBrains Mono;
     font-size: 16px;
     font-weight: bold;
 }
@@ -16,12 +16,12 @@ window#waybar {
     padding: 0 5px;
     /* Avoid rounded borders under each workspace name */
     border: none;
+    background-color: #6272a4;
     border-radius: 0;
 }
 
 #workspaces button.focused {
     padding-top: 3px;
-    background-color: #6272a4;
     border-bottom: 3px solid #50fa7b;
 }
 
@@ -34,32 +34,12 @@ window#waybar {
     border-bottom: 3px solid #50fa7b;
 }
 
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#mpd,
-#custom-power {
+#mode {
     padding: 0 10px;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+#custom-power {
+    margin-right: 13px;
 }
 
 #taskbar button {
