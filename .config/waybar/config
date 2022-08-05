@@ -43,7 +43,7 @@
     },
     "custom/power": {
 		"format": "<span color='#ff79c6'></span>",
-		"on-click": "sh ~/.config/waybar/power.sh",
+		"on-click": "~/.config/waybar/power.py",
         "tooltip": false
 	},
     "custom/spacer": {
