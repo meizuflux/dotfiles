@@ -1,7 +1,0 @@
-@import "~/.config/rofi/power.rasi"
-
-#element {
-    border: 0;
-    padding: 2px;
-    children: [element-icon, element-text];
-}
